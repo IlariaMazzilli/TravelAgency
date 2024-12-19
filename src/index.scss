@@ -1,0 +1,287 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+* {
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  & ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    & li a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+.dropdown-toggle {
+  background-color: inherit !important;
+  color: inherit !important;
+  border: none !important;
+}
+.dropdown-menu {
+  width: auto !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+.dropdown-menu li a {
+  width: 3.5rem !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  text-align: left !important;
+}
+
+.landingContainer {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.decore {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 19%;
+  margin-left: 54%;
+}
+h3 {
+  display: flex;
+  justify-content: center;
+  font-weight: bold !important;
+}
+.ellipse {
+  width: 150px; /* Larghezza dell'ellissi */
+  height: 300px; /* Altezza dell'ellissi */
+  background-color: transparent; /* Colore di sfondo dell'ellissi */
+  border-radius: 50%; /* Crea la forma ellittica */
+  box-shadow: 40px 20px 40px rgba(213, 174, 228, 0.5) !important; /* Ombra con sfocatura */
+  position: absolute; /* Posiziona l'ellissi all'interno del div */
+  top: 80px; /* Posiziona verticalmente al centro */
+  left: -150px; /* Posiziona orizzontalmente al centro */
+}
+.heroText {
+  display: flex;
+  height: 100%;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 8rem;
+  padding: 0 5rem;
+  position: relative;
+  & h1 {
+    font-weight: bold;
+    font-size: 5em;
+    & span {
+      position: relative;
+    }
+    & span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 90%;
+      width: 100%;
+      background-size: contain;
+      height: 40px;
+      background-image: url("./assets/sottolinea.png");
+      background-repeat: no-repeat;
+      z-index: -3;
+    }
+  }
+  & p {
+    color: #5e6282;
+    font-size: 1.5rem;
+  }
+  & button {
+    background-color: #f1a501;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 10%;
+    height: fit-content;
+    margin-top: 0.5rem;
+  }
+  & div {
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+  }
+}
+
+.play {
+  margin-top: auto;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  gap: 1rem;
+  & span {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.heroImage {
+  z-index: 8;
+}
+
+.servicesDiv {
+  gap: 1rem;
+  margin-top: 5rem;
+  overflow: hidden;
+  & h3 {
+    font-weight: bold;
+  }
+  & div {
+    display: flex;
+    justify-content: center;
+  }
+}
+.crosses {
+  width: auto;
+  z-index: 3;
+  position: relative;
+  left: 30rem;
+}
+.cardsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  padding:1rem
+}
+
+.card {
+  border: none !important;
+  z-index: 1;  /* Imposta un z-index positivo per fare in modo che la card sia sopra */
+}
+
+.card:hover {
+  box-shadow: 5px 5px 10px 0px rgba(143, 140, 140, 0.5) !important;
+  border-radius: 10% !important;
+  z-index: 2;  /* Imposta un z-index maggiore per far sì che la card in hover stia sopra */
+  transition: 0.5s ease-in-out;
+}
+
+.card-img-top {
+  height: 5em;
+}
+
+.card-body {
+  display: block;
+}
+
+.destinationCard{
+  border-radius: 10% !important;
+  box-shadow: 5px 5px 10px 0px rgba(143, 140, 140, 0.5) !important;
+  height: 22em !important;
+  width: 5em;
+  padding:0 !important
+}
+
+.destinationCardImg{
+width: 100% !important;
+height: 60% !important;
+object-fit: cover !important;
+border-radius: 10% 10% 0 0 !important;
+}
+.cardsWrapper {
+  max-width: 500px;
+  height: 290px;  /* Altezza definita per creare uno spazio scrollabile */
+  overflow-y: scroll;  /* Aggiungi lo scroll verticale */
+  scrollbar-width: none;
+  padding:3rem 5rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap:2rem
+}
+
+.login-container {
+  position: sticky;
+  border: none;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  max-height:200px;
+  width: 100%;
+  height: 150%;
+  padding:1rem;
+}
+
+.login-container .profile-img {
+  height: 70px;
+  width: 70px;
+  background: url("https://images.unsplash.com/photo-1504933350103-e840ede978d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -3rem;
+  left: -55px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+  display: -webkit-box;             /* Abilita il layout a blocchi flessibili */
+  -webkit-line-clamp: 3;            /* Limita a 3 righe di testo */
+  -webkit-box-orient: vertical;     /* Imposta l'orientamento verticale */
+  overflow: hidden;                 /* Nasconde il testo che supera */
+  text-overflow: ellipsis;          /* Aggiungi i puntini di sospensione */
+  height: 100px;    
+}
+.login-container:nth-child(1) {
+  top: 10px;
+  z-index: 1;
+}
+
+.login-container:nth-child(2) {
+  top: 20px;
+  z-index: 2;
+}
+
+.login-container:nth-child(3) {
+  top: 30px;
+  z-index: 3;
+}
+
+.login-container:nth-child(4) {
+  top: 40px;
+  z-index: 4;
+}
+
+.login-container:nth-child(5) {
+  top: 50px;
+  z-index: 5;
+}
+
+.login-container:nth-child(6) {
+  top: 60px;
+}
+
+.login-container:nth-child(7) {
+  top: 70px;
+}
+
+.login-container:nth-child(8) {
+  top: 80px;
+}
+
+
+
+
+
